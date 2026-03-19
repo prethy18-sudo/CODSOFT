@@ -1,0 +1,29 @@
+def simple_chatbot():
+    print("Hello! I am RuleBot. Type 'bye' to exit.")
+    
+    while True:
+        user_input = input("You: ").lower()
+
+        # Rule 1: Greetings
+        if "hello" in user_input or "hi" in user_input:
+            print("RuleBot: Hi there! How can I help you today?")
+
+        # Rule 2: Inquiry about health/status
+        elif "how are you" in user_input:
+            print("RuleBot: I'm functioning at 100% capacity, thank you!")
+
+        # Rule 3: Inquiry about name
+        elif "your name" in user_input:
+            print("RuleBot: I am a simple rule-based AI created for this tutorial.")
+
+        # Rule 4: Exit condition
+        elif "bye" in user_input:
+            print("RuleBot: Goodbye! Have a great day.")
+            break
+
+        # Rule 5: Fallback (for when no rules match)
+        else:
+            print("RuleBot: I'm sorry, I don't understand that yet. Can you try phrasing it differently?")
+
+# Run the bot
+simple_chatbot()
